@@ -1,14 +1,19 @@
 :root {
-  --bg: #f6f1ea;
-  --panel: #f1ece5;
-  --soft: #e8dfd5;
-  --text: #1c1c1b;
-  --muted: #5d5a56;
-  --dark: #1d2c28;
-  --dark-2: #2d3d37;
-  --gold: #b8926a;
-  --line: rgba(34, 31, 28, 0.18);
-  --shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  --bg: #f4efe8;
+  --bg-deep: #141312;
+  --panel: #f9f5f0;
+  --panel-strong: #efe7dc;
+  --soft: #eadcc6;
+  --text: #171412;
+  --text-soft: #4f4a44;
+  --muted: #6d655f;
+  --dark: #121615;
+  --dark-2: #1d2a28;
+  --gold: #b8925a;
+  --gold-soft: #d8ba8e;
+  --line: rgba(23, 20, 18, 0.12);
+  --shadow: 0 22px 56px rgba(18, 18, 18, 0.12);
+  --radius: 24px;
 }
 
 * {
@@ -37,21 +42,32 @@ img {
 }
 
 button,
-input {
+input,
+textarea {
   font: inherit;
 }
 
 .container {
-  width: min(1220px, calc(100% - 32px));
+  width: min(1240px, calc(100% - 32px));
   margin: 0 auto;
 }
 
 .site-header,
 .site-footer,
-.section,
+.site-main,
 .hero,
 .featured,
 .categories,
 .benefits {
   width: 100%;
+}
+
+main {
+  display: block;
+}
+
+button,
+input,
+textarea {
+  border-radius: 0;
 }

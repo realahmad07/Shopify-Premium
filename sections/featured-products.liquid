@@ -1,21 +1,71 @@
 <section class="featured container">
-  <div class="section-title featured-title">Featured Collection</div>
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Signature pieces</p>
+      <h2 class="section-title">Featured collection</h2>
+    </div>
+  </div>
+
   <div class="slider-arrows" aria-label="Featured product navigation">
     <button aria-label="Previous">‹</button>
     <button aria-label="Next">›</button>
   </div>
 
   <div class="product-grid">
-    {% for block in section.blocks %}
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        <article class="product-card">
+          <div class="product-media">
+            {% if block.settings.image != blank %}
+              {{ block.settings.image | image_url: width: 900 | image_tag: alt: block.settings.title }}
+            {% endif %}
+          </div>
+          <div class="product-info">
+            <span class="product-tag">Signature</span>
+            <h4>{{ block.settings.title }}</h4>
+            <p class="product-price">{{ block.settings.price }}</p>
+            <a href="/collections/all" class="primary-btn">Add to cart</a>
+          </div>
+        </article>
+      {% endfor %}
+    {% else %}
       <article class="product-card">
-        {% if block.settings.image != blank %}
-          {{ block.settings.image | image_url: width: 900 | image_tag: alt: block.settings.title }}
-        {% endif %}
-        <h4>{{ block.settings.title }}</h4>
-        <p>{{ block.settings.price }}</p>
-        <button>Add to Cart</button>
+        <div class="product-media"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Luxury suit" /></div>
+        <div class="product-info">
+          <span class="product-tag">Signature</span>
+          <h4>Classic Silk Kurta</h4>
+          <p class="product-price">PKR 7,499</p>
+          <a href="/collections/all" class="primary-btn">Add to cart</a>
+        </div>
       </article>
-    {% endfor %}
+      <article class="product-card">
+        <div class="product-media"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Premium ensemble" /></div>
+        <div class="product-info">
+          <span class="product-tag">Collection</span>
+          <h4>Embroidered Heritage Set</h4>
+          <p class="product-price">PKR 9,999</p>
+          <a href="/collections/all" class="primary-btn">Add to cart</a>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Luxury fashion" /></div>
+        <div class="product-info">
+          <span class="product-tag">Bestseller</span>
+          <h4>Tailored Evening Suit</h4>
+          <p class="product-price">PKR 11,499</p>
+          <a href="/collections/all" class="primary-btn">Add to cart</a>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-media"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Luxury shawl" /></div>
+        <div class="product-info">
+          <span class="product-tag">New</span>
+          <h4>Fine Cashmere Shawl</h4>
+          <p class="product-price">PKR 6,299</p>
+          <a href="/collections/all" class="primary-btn">Add to cart</a>
+        </div>
+      </article>
+    {% endif %}
   </div>
 </section>
 
@@ -28,8 +78,8 @@
       "name": "Product",
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Product image" },
-        { "type": "text", "id": "title", "label": "Product name", "default": "Classic Cotton Shalwar Kameez" },
-        { "type": "text", "id": "price", "label": "Price", "default": "PKR 3,499" }
+        { "type": "text", "id": "title", "label": "Product name", "default": "Classic Silk Kurta" },
+        { "type": "text", "id": "price", "label": "Price", "default": "PKR 7,499" }
       ]
     }
   ],
