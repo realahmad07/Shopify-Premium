@@ -1,0 +1,27 @@
+<section class="container">
+  <div class="contact-box">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you about custom orders, sizing, or general inquiries.</p>
+
+    {% form 'contact' %}
+      {{ form.errors | default_errors }}
+      <div class="form-row">
+        <label for="ContactFormName">Name</label>
+        <input type="text" name="contact[name]" id="ContactFormName" value="{{ form.name }}" />
+      </div>
+      <div class="form-row">
+        <label for="ContactFormEmail">Email</label>
+        <input type="email" name="contact[email]" id="ContactFormEmail" value="{{ form.email }}" />
+      </div>
+      <div class="form-row">
+        <label for="ContactFormPhone">Phone</label>
+        <input type="tel" name="contact[phone]" id="ContactFormPhone" value="{{ form.phone }}" />
+      </div>
+      <div class="form-row">
+        <label for="ContactFormMessage">Message</label>
+        <textarea name="contact[body]" id="ContactFormMessage">{{ form.body }}</textarea>
+      </div>
+      <button type="submit" class="primary-btn">Send</button>
+    {% endform %}
+  </div>
+</section>

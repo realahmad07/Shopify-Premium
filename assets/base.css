@@ -1,0 +1,57 @@
+:root {
+  --bg: #f6f1ea;
+  --panel: #f1ece5;
+  --soft: #e8dfd5;
+  --text: #1c1c1b;
+  --muted: #5d5a56;
+  --dark: #1d2c28;
+  --dark-2: #2d3d37;
+  --gold: #b8926a;
+  --line: rgba(34, 31, 28, 0.18);
+  --shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(1220px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header,
+.site-footer,
+.section,
+.hero,
+.featured,
+.categories,
+.benefits {
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+<section class="featured container">
+  <div class="section-title featured-title">Featured Collection</div>
+  <div class="slider-arrows" aria-label="Featured product navigation">
+    <button aria-label="Previous">‹</button>
+    <button aria-label="Next">›</button>
+  </div>
+
+  <div class="product-grid">
+    {% for block in section.blocks %}
+      <article class="product-card">
+        {% if block.settings.image != blank %}
+          {{ block.settings.image | image_url: width: 900 | image_tag: alt: block.settings.title }}
+        {% endif %}
+        <h4>{{ block.settings.title }}</h4>
+        <p>{{ block.settings.price }}</p>
+        <button>Add to Cart</button>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured products",
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Product image" },
+        { "type": "text", "id": "title", "label": "Product name", "default": "Classic Cotton Shalwar Kameez" },
+        { "type": "text", "id": "price", "label": "Price", "default": "PKR 3,499" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Featured products" }]
+}
+{% endschema %}

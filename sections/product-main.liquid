@@ -1,0 +1,22 @@
+<section class="container">
+  <div class="product-page">
+    {% assign featured_image = product.featured_image %}
+    {% if featured_image %}
+      <div class="product-image-wrap">
+        {{ featured_image | image_url: width: 1200 | image_tag: alt: product.title }}
+      </div>
+    {% endif %}
+
+    <div class="product-info">
+      <p class="eyebrow">Featured Product</p>
+      <h1>{{ product.title }}</h1>
+      <div class="price">{{ product.price | money }}</div>
+      <div class="product-description">{{ product.description }}</div>
+
+      <form method="post" action="/cart/add" class="product-form">
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" />
+        <button type="submit" class="primary-btn">Add to Cart</button>
+      </form>
+    </div>
+  </div>
+</section>
