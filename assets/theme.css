@@ -22,7 +22,7 @@
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  min-height: 96px;
+  min-height: 78px;
 }
 
 .header-icons {
@@ -70,12 +70,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  margin-bottom: 10px;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 8px;
   border: 1px solid rgba(17,17,17,0.14);
   border-radius: 50%;
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.12em;
   color: var(--text);
   background: rgba(255,255,255,0.8);
@@ -83,7 +83,7 @@
 
 .brand-text {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.8rem, 2.7vw, 3.8rem);
+  font-size: clamp(2.3rem, 2.2vw, 3.1rem);
   font-weight: 600;
   letter-spacing: -0.06em;
   color: var(--text);
@@ -91,19 +91,19 @@
 }
 
 .brand-tag {
-  font-size: 9px;
+  font-size: 8px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-top: 7px;
+  margin-top: 5px;
 }
 
 .main-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  min-height: 54px;
+  gap: 28px;
+  min-height: 48px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 9px;
@@ -239,6 +239,22 @@
   perspective: 1200px;
 }
 
+.hero-photo-frame {
+  position: absolute;
+  inset: 0 0 0 0;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(17,17,17,0.08);
+  box-shadow: var(--shadow);
+}
+
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .visual-card {
   position: absolute;
   overflow: hidden;
@@ -256,20 +272,20 @@
 }
 
 .card-one {
-  width: 240px;
-  height: 300px;
+  width: 210px;
+  height: 260px;
   right: 90px;
-  top: 22px;
-  border-radius: 24px;
+  top: 18px;
+  border-radius: 22px;
   transform: rotateY(-14deg) rotateX(8deg);
 }
 
 .card-two {
-  width: 210px;
-  height: 250px;
+  width: 170px;
+  height: 210px;
   right: 0;
-  bottom: 18px;
-  border-radius: 20px;
+  bottom: 16px;
+  border-radius: 18px;
   transform: rotateY(14deg) rotateX(8deg);
 }
 
@@ -511,11 +527,35 @@
   font-weight: 700;
 }
 
+.product-card .product-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.product-card .outline-btn,
 .product-card .primary-btn {
-  min-height: 42px;
-  padding: 0 14px;
-  width: 100%;
+  min-height: 38px;
+  padding: 0 10px;
   border-radius: 999px;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card .outline-btn {
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(17,17,17,0.12);
+  color: var(--text);
+}
+
+.product-card .primary-btn {
+  width: 100%;
 }
 
 .benefits-grid {
