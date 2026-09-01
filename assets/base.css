@@ -24,9 +24,11 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", "Segoe UI", sans-serif;
   background: linear-gradient(180deg, #faf9f7 0%, #f2efe9 100%);
   color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {

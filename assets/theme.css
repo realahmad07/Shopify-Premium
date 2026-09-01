@@ -83,7 +83,7 @@
 }
 
 .brand-text {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(2.3rem, 2.2vw, 3.1rem);
   font-weight: 600;
   letter-spacing: -0.06em;
@@ -110,7 +110,7 @@
   font-size: 9px;
   font-weight: 700;
   color: var(--text-soft);
-  font-family: "Inter", "Segoe UI", sans-serif;
+  font-family: "Montserrat", "Segoe UI", sans-serif;
 }
 
 .main-nav a {
@@ -187,7 +187,7 @@
 
 .hero-copy h1 {
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(3.3rem, 4vw, 5.5rem);
   line-height: 0.9;
   letter-spacing: -0.08em;
@@ -372,7 +372,7 @@
 
 .section-title {
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(2.8rem, 3.2vw, 4.2rem);
   letter-spacing: -0.06em;
   line-height: 1;
@@ -456,7 +456,7 @@
 
 .category-content h3 {
   margin: 0 0 12px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(2.7rem, 3vw, 3.7rem);
   letter-spacing: -0.05em;
 }
@@ -635,7 +635,7 @@
 }
 
 .brand-logo {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Playfair Display", serif;
   font-size: 2.7rem;
   color: #fff;
   margin-bottom: 10px;
