@@ -1,6 +1,6 @@
 .topbar {
-  background: linear-gradient(90deg, #12100f, #1e1a18, #12100f);
-  color: var(--sand);
+  background: #ffffff;
+  color: #121212;
   text-align: center;
   font-size: 10px;
   letter-spacing: 0.26em;
@@ -13,7 +13,7 @@
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(13, 11, 10, 0.82);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
 }
@@ -37,7 +37,7 @@
 
 .header-icons button {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.7);
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -45,14 +45,14 @@
   place-items: center;
   cursor: pointer;
   color: var(--text);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 18px rgba(17,17,17,0.04);
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
 .header-icons button:hover {
   transform: translateY(-2px);
-  border-color: rgba(217, 178, 115, 0.8);
-  background: rgba(217, 178, 115, 0.08);
+  border-color: rgba(17,17,17,0.22);
+  background: rgba(17,17,17,0.03);
 }
 
 .header-icons svg {
@@ -67,17 +67,27 @@
 }
 
 .brand-mark {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(17,17,17,0.14);
+  border-radius: 50%;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  background: rgba(255,255,255,0.8);
 }
 
 .brand-text {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.9rem, 2.7vw, 4rem);
+  font-size: clamp(2.8rem, 2.7vw, 3.8rem);
   font-weight: 600;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.06em;
   color: var(--text);
+  text-transform: uppercase;
 }
 
 .brand-tag {
@@ -85,7 +95,7 @@
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-top: 6px;
+  margin-top: 7px;
 }
 
 .main-nav {
@@ -108,7 +118,7 @@
 }
 
 .main-nav a:hover {
-  color: var(--gold-soft);
+  color: var(--text);
 }
 
 .main-nav a::after {
@@ -118,7 +128,7 @@
   right: 0;
   bottom: -4px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  background: linear-gradient(90deg, transparent, rgba(17,17,17,0.7), transparent);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.2s ease;
@@ -131,15 +141,15 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 30px 0 44px;
-  background: linear-gradient(180deg, rgba(15, 12, 11, 1), rgba(21, 18, 16, 1));
+  padding: 32px 0 46px;
+  background: linear-gradient(180deg, #ffffff 0%, #f3f1ed 100%);
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 82% 18%, rgba(217, 178, 115, 0.12), transparent 22%), radial-gradient(circle at 16% 80%, rgba(255,255,255,0.03), transparent 24%);
+  background: radial-gradient(circle at 82% 18%, rgba(17,17,17,0.03), transparent 24%), radial-gradient(circle at 16% 80%, rgba(17,17,17,0.015), transparent 22%);
   pointer-events: none;
 }
 
@@ -162,7 +172,7 @@
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--muted);
   margin-bottom: 18px;
 }
 
@@ -207,9 +217,9 @@
 }
 
 .primary-btn {
-  background: linear-gradient(135deg, #f0d39d, #c89552);
-  color: #120f0d;
-  box-shadow: 0 18px 30px rgba(202, 149, 82, 0.25);
+  background: #111111;
+  color: #ffffff;
+  box-shadow: 0 16px 28px rgba(17,17,17,0.12);
 }
 
 .primary-btn:hover,
@@ -219,8 +229,8 @@
 
 .secondary-btn {
   color: var(--text);
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(17,17,17,0.12);
+  background: rgba(255,255,255,0.7);
 }
 
 .hero-visual {
@@ -232,7 +242,7 @@
 .visual-card {
   position: absolute;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(17,17,17,0.08);
   box-shadow: var(--shadow);
   background: #fff;
   transform-style: preserve-3d;
@@ -268,11 +278,11 @@
   left: 18px;
   bottom: 18px;
   padding: 10px 14px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(17,15,14,0.56);
+  border: 1px solid rgba(17,17,17,0.12);
+  background: rgba(255,255,255,0.8);
   backdrop-filter: blur(10px);
   border-radius: 999px;
-  color: var(--gold);
+  color: var(--text);
   font-size: 9px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -288,7 +298,7 @@
 .stat {
   min-width: 130px;
   padding: 16px 18px;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0.82);
   border: 1px solid var(--line);
   border-radius: 18px;
 }
@@ -323,7 +333,7 @@
 
 .eyebrow {
   margin: 0 0 10px;
-  color: var(--gold);
+  color: var(--muted);
   font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -371,14 +381,14 @@
 
 .category-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 30px 56px rgba(0,0,0,0.18);
+  box-shadow: 0 30px 56px rgba(17,17,17,0.12);
 }
 
 .category-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(17, 15, 14, 0.12), rgba(17, 15, 14, 0.68));
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0.14), rgba(17, 17, 17, 0.72));
 }
 
 .category-card.men {
@@ -403,7 +413,7 @@
 .category-label {
   display: inline-block;
   margin-bottom: 12px;
-  color: var(--gold);
+  color: #f1eee9;
   font-size: 9px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -434,11 +444,11 @@
   height: 42px;
   border: 1px solid var(--line);
   border-radius: 50%;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0.7);
   color: var(--text);
   font-size: 1.8rem;
   cursor: pointer;
-  box-shadow: 0 12px 20px rgba(0,0,0,0.14);
+  box-shadow: 0 12px 20px rgba(17,17,17,0.04);
 }
 
 .product-grid {
@@ -446,18 +456,18 @@
 }
 
 .product-card {
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0.7);
   border: 1px solid var(--line);
   overflow: hidden;
   border-radius: 22px;
-  box-shadow: 0 18px 34px rgba(0,0,0,0.12);
+  box-shadow: 0 18px 34px rgba(17,17,17,0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .product-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 30px 44px rgba(0,0,0,0.16);
-  border-color: rgba(217, 178, 115, 0.4);
+  box-shadow: 0 30px 44px rgba(17,17,17,0.08);
+  border-color: rgba(17,17,17,0.16);
 }
 
 .product-media {
@@ -483,7 +493,7 @@
 .product-tag {
   display: inline-block;
   margin-bottom: 8px;
-  color: var(--gold);
+  color: var(--muted);
   font-size: 9px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -497,7 +507,7 @@
 
 .product-price {
   margin: 0 0 16px;
-  color: var(--muted);
+  color: var(--text-soft);
   font-weight: 700;
 }
 
@@ -516,7 +526,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0.7);
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 18px 16px;
@@ -528,8 +538,8 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, #efd7ab, #d7b27b);
-  color: #1d1713;
+  background: #f0eee9;
+  color: #111111;
   font-size: 18px;
 }
 
@@ -545,9 +555,9 @@
 }
 
 .site-footer {
-  background: #120f0d;
+  background: #111111;
   color: rgba(255,255,255,0.8);
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(17,17,17,0.08);
   padding: 58px 0 20px;
 }
 
@@ -623,8 +633,8 @@
 
 .newsletter button {
   border: none;
-  background: linear-gradient(135deg, #efc988, #c79d62);
-  color: var(--dark);
+  background: #ffffff;
+  color: #111111;
   padding: 0 18px;
   cursor: pointer;
   font-weight: 700;
