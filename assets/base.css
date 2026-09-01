@@ -24,11 +24,12 @@ html {
 
 body {
   margin: 0;
-  font-family: "Montserrat", "Segoe UI", sans-serif;
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
   background: linear-gradient(180deg, #faf9f7 0%, #f2efe9 100%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-weight: 500;
 }
 
 h1,
@@ -37,8 +38,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Playfair Display", serif;
-  letter-spacing: -0.04em;
+  font-family: "Cinzel", serif;
+  letter-spacing: -0.02em;
   font-weight: 600;
 }
 
