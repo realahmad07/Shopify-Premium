@@ -358,6 +358,15 @@
   text-align: left;
 }
 
+.section-head-centered {
+  text-align: center;
+}
+
+.section-title-wrap {
+  display: flex;
+  justify-content: center;
+}
+
 .eyebrow {
   margin: 0 0 10px;
   color: var(--muted);
@@ -376,6 +385,13 @@
   line-height: 0.96;
   text-align: left;
   max-width: 480px;
+  font-weight: 600;
+}
+
+.section-title-centered {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .section-copy {
