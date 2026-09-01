@@ -1,19 +1,19 @@
 :root {
-  --bg: #f5efe7;
-  --bg-soft: #f0e5d8;
-  --panel: #fffaf3;
-  --panel-soft: #f6ecdf;
-  --text: #1d1713;
-  --text-soft: #4b413a;
-  --muted: #685f59;
-  --dark: #1e1b19;
-  --gold: #b88b57;
-  --gold-deep: #8d663b;
-  --olive: #23312e;
-  --terracotta: #8c5d47;
-  --line: rgba(29, 23, 19, 0.09);
-  --shadow: 0 22px 60px rgba(22, 18, 15, 0.09);
-  --radius: 24px;
+  --bg: #0d0b0a;
+  --bg-soft: #171310;
+  --panel: #171310;
+  --panel-soft: #1f1a17;
+  --text: #f5efe8;
+  --text-soft: #ddd1c4;
+  --muted: #b2a295;
+  --dark: #100e0d;
+  --gold: #d9b273;
+  --gold-deep: #ba8d4d;
+  --sand: #f1e5d2;
+  --cream: #f9f4ef;
+  --line: rgba(255, 255, 255, 0.08);
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+  --radius: 28px;
 }
 
 * {
@@ -27,7 +27,7 @@ html {
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, #f8f3eb 0%, #f4ece3 100%);
+  background: radial-gradient(circle at top, rgba(217, 178, 115, 0.09), transparent 30%), linear-gradient(180deg, #100e0d 0%, #171310 100%);
   color: var(--text);
 }
 
@@ -48,7 +48,7 @@ textarea {
 }
 
 .container {
-  width: min(1180px, calc(100% - 28px));
+  width: min(1240px, calc(100% - 34px));
   margin: 0 auto;
 }
 
